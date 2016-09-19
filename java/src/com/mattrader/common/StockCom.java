@@ -28,7 +28,7 @@ public class StockCom {
 	 * @param caller - the ticker this stock refers to
 	 * @param dcb - the client this stock belong to
 	 */
-	StockCom(TickerCom caller, DarwinClientBaseCom dcb) {
+	StockCom(TickerCom caller, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.c(this, "constructor: " + caller.tickerCode);

@@ -17,7 +17,7 @@ class ServiceStreamReaderCom implements Runnable {
 	
 	DispatcherCom dispatcher;
 	
-	DarwinClientBaseCom dcb;
+	MTClientBaseCom dcb;
 	
 	LogCom log;
 	
@@ -33,10 +33,10 @@ class ServiceStreamReaderCom implements Runnable {
 	 * Constructor
 	 * 
 	 * @param socketInput - BufferedReader from which this runnable has to read
-	 * @param callerDcb - {@link DarwinClientBaseCom} client hosting the service
+	 * @param callerDcb - {@link MTClientBaseCom} client hosting the service
 	 * running this runnable
 	 */
-	ServiceStreamReaderCom(BufferedReader socketInput, DarwinClientBaseCom callerDcb) {
+	ServiceStreamReaderCom(BufferedReader socketInput, MTClientBaseCom callerDcb) {
 		socketIn = socketInput;
 		interrupted = false;
 		dcb = callerDcb;

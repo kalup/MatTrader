@@ -21,7 +21,7 @@ public class CandleSeriesCom extends HistoricalDataSeriesCom {
 	 * @param ticker - the ticker this candle refers to
 	 * @param dcb - the client that will use this Candle
 	 */
-	CandleSeriesCom(TickerCom ticker, DarwinClientBaseCom dcb) {
+	CandleSeriesCom(TickerCom ticker, MTClientBaseCom dcb) {
 		super(ticker, dcb);
 
 		prOff = new ArrayList<Double>();

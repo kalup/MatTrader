@@ -27,7 +27,7 @@ public class BidAskCom {
 	 * @param timestamp	Timestamp of the transaction
 	 */
 	BidAskCom(long qtyBid, long nPropBid, double prBid, long qtyAsk, long nPropAsk, double prAsk,
-			String timestamp, DarwinClientBaseCom dcb) {
+			String timestamp, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.fff(this, "constructor; timestamp: " + timestamp);

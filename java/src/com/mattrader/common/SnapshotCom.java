@@ -25,7 +25,7 @@ public class SnapshotCom {
 	 * @param bidAsk
 	 * @param dcb
 	 */
-	SnapshotCom(PriceDataCom priceData, Book5Com book, BidAskCom bidAsk, DarwinClientBaseCom dcb) {
+	SnapshotCom(PriceDataCom priceData, Book5Com book, BidAskCom bidAsk, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.fff(this, "constructor");

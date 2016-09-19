@@ -49,7 +49,7 @@ public final class OrderCom {
 	 * @param ticker - the ticker the order refers to
 	 * @param dcb - the client which requested the transaction
 	 */
-	OrderCom(String orderId, TickerCom ticker, DarwinClientBaseCom dcb) {
+	OrderCom(String orderId, TickerCom ticker, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.ff(this, "constructor; orderID: " + orderId + "; ticker: " + ticker.tickerCode);

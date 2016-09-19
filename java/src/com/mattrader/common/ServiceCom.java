@@ -25,14 +25,14 @@ public abstract class ServiceCom {
 	protected ServiceStreamReaderCom streamReader;
 	protected Thread thread;
 	
-	protected DarwinClientBaseCom dcb;
+	protected MTClientBaseCom dcb;
 	/**
 	 * Constructor, it prepare the structure, but it neither creates any connection
 	 * nor spawns any thread
 	 * 
 	 * @param callerDcb - the client that creating this service
 	 */
-	ServiceCom(DarwinClientBaseCom callerDcb) {
+	ServiceCom(MTClientBaseCom callerDcb) {
 		dcb = callerDcb;
 
 		log = dcb.log();
@@ -51,7 +51,7 @@ public abstract class ServiceCom {
 		log.c(this, "opening");
 		if(!this.isOpen()) {
 			try {
-				socket = new Socket(DarwinClientBaseCom.hostname, this.getPort());
+				socket = new Socket(MTClientBaseCom.hostname, this.getPort());
 				input = new BufferedReader(
 						new InputStreamReader(socket.getInputStream()));
 				output = new PrintWriter(socket.getOutputStream(),true);

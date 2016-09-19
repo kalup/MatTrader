@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * a couple of locks are involved.
  * <p>
  * The session has a maximum size, see
- * {@link DarwinClientBaseCom#defaultSessionBuffer(int)}, and data will be truncated
+ * {@link MTClientBaseCom#defaultSessionBuffer(int)}, and data will be truncated
  * if this limit is overflowed by more than 10%. Data may also be discarded by the
  * mean of a call to {@link SessionDBCom#flush()}
  * 
@@ -81,7 +81,7 @@ public class SessionDBCom {
 	 * @param bufferMaxSize
 	 * @param dcb
 	 */
-	SessionDBCom(int bufferMaxSize, DarwinClientBaseCom dcb) {
+	SessionDBCom(int bufferMaxSize, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.c(this, "constructor; size: " + bufferMaxSize);
@@ -129,7 +129,7 @@ public class SessionDBCom {
 	 * 
 	 * @param bufferMaxSize -the new maximal size
 	 * 
-	 * @see DarwinClientBaseCom#defaultSessionBuffer(int)
+	 * @see MTClientBaseCom#defaultSessionBuffer(int)
 	 */
 	public synchronized void resizeBuffer(int bufferMaxSize) {
 		log.i(this, "resize; size: " + bufferMaxSize);

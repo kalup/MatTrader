@@ -13,14 +13,14 @@ class DispatcherCom {
 	private LogCom log;
 
 	private HashMap<String,TickerCom> subTicker;
-	private DarwinClientBaseCom dcb;
+	private MTClientBaseCom dcb;
 	
 	/**
 	 * Constructor
-	 * @param dcb - the {@link DarwinClientBaseCom} client which will be served by the instance
+	 * @param dcb - the {@link MTClientBaseCom} client which will be served by the instance
 	 * of this class
 	 */
-	DispatcherCom(DarwinClientBaseCom dcb) {
+	DispatcherCom(MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.c(this, "constructor");

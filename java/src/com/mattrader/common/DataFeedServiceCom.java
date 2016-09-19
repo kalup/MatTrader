@@ -14,7 +14,7 @@ public class DataFeedServiceCom extends ServiceCom {
 	 * 
 	 * @param callerDcb - the client that creating this service
 	 */
-	DataFeedServiceCom(DarwinClientBaseCom callerDcb) {
+	DataFeedServiceCom(MTClientBaseCom callerDcb) {
 		super(callerDcb);
 	}
 
@@ -23,7 +23,7 @@ public class DataFeedServiceCom extends ServiceCom {
 	 */
 	@Override
 	public int getPort() {
-		return DarwinClientBaseCom.DATAFEED_PORT;
+		return MTClientBaseCom.DATAFEED_PORT;
 	}
 	
 	// DataFeed specific functions

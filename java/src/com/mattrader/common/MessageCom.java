@@ -76,10 +76,10 @@ class MessageCom {
 	/**
 	 * Constructor
 	 * @param message - String containing the message to be transformed
-	 * @param dcb - {@link DarwinClientBaseCom} client that captured this
+	 * @param dcb - {@link MTClientBaseCom} client that captured this
 	 * message
 	 */
-	MessageCom(String message, DarwinClientBaseCom dcb) {
+	MessageCom(String message, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		errorEventManager = dcb.onErrorEventManager();

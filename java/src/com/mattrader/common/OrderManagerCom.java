@@ -18,7 +18,7 @@ public final class OrderManagerCom {
 	private LogCom log;
 
 	public/*DEBUG private*/ Hashtable<String, OrderCom> orders; //XXX
-	private DarwinClientBaseCom dcb;
+	private MTClientBaseCom dcb;
 	private int lastOrdID;
 
 	/**
@@ -26,7 +26,7 @@ public final class OrderManagerCom {
 	 * 
 	 * @param dcb - the client this order manager belongs to
 	 */
-	OrderManagerCom(DarwinClientBaseCom dcb) {
+	OrderManagerCom(MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.c(this, "constructor");

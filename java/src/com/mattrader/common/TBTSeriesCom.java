@@ -18,7 +18,7 @@ public class TBTSeriesCom extends HistoricalDataSeriesCom {
 	 * @param ticker - the ticker this TBT refers to
 	 * @param dcb - the client that will use this TBT
 	 */
-	TBTSeriesCom(TickerCom ticker, DarwinClientBaseCom dcb) {
+	TBTSeriesCom(TickerCom ticker, MTClientBaseCom dcb) {
 		super(ticker, dcb);
 
 		price = new ArrayList<Double>();

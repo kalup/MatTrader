@@ -23,7 +23,7 @@ public class TickerCom {
 	private LogCom log;
 
 	final String tickerCode;
-	final DarwinClientBaseCom dcb;
+	final MTClientBaseCom dcb;
 	
 	private Hashtable<String, OrderCom> orders; // XXX final?
 	
@@ -63,7 +63,7 @@ public class TickerCom {
 	 * @param sessionBufferSize - the maximum size of the buffer for the session
 	 * of this Ticker
 	 */
-	TickerCom(String ticker, DarwinClientBaseCom client, int sessionBufferSize) {
+	TickerCom(String ticker, MTClientBaseCom client, int sessionBufferSize) {
 		log = client.log();
 		log.c(this, "constructor: " + this.tickerCode);
 		

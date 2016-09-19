@@ -29,7 +29,7 @@ public abstract class HistoricalDataSeriesCom {
 	 * @param ticker - the ticker this series refers to
 	 * @param dcb - the client that will use this series
 	 */
-	HistoricalDataSeriesCom(TickerCom ticker, DarwinClientBaseCom dcb) {
+	HistoricalDataSeriesCom(TickerCom ticker, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.ff(this,"constructor: " + ticker.tickerCode);

@@ -14,7 +14,7 @@ public class HistoryServiceCom extends ServiceCom {
 	 * 
 	 * @param callerDcb - the client that creating this service
 	 */
-	HistoryServiceCom(DarwinClientBaseCom callerDcb) {	// We ensure this class can't be instantiated by external app
+	HistoryServiceCom(MTClientBaseCom callerDcb) {	// We ensure this class can't be instantiated by external app
 		super(callerDcb);
 	}
 
@@ -23,7 +23,7 @@ public class HistoryServiceCom extends ServiceCom {
 	 */
 	@Override
 	public int getPort() {
-		return DarwinClientBaseCom.HISTORY_PORT;
+		return MTClientBaseCom.HISTORY_PORT;
 	}
 	
 	// History specific functions

@@ -62,10 +62,10 @@ public class LogCom {
 	 * <p>
 	 * dcb_CLIENTNAME_DATE.log
 	 * <p>
-	 * @param dcb - the {@link DarwinClientBaseCom} client associated
+	 * @param dcb - the {@link MTClientBaseCom} client associated
 	 * with the log
 	 */
-	LogCom(DarwinClientBaseCom dcb) {
+	LogCom(MTClientBaseCom dcb) {
 		consoleLog = Logger.getLogger("com.mattrader.common.consolelog."+dcb.clientName);
         // Request that every detail gets logged.
 		consoleLog.setLevel(Level.SEVERE); //used to be Level.WARNING

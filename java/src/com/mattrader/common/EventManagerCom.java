@@ -31,9 +31,9 @@ public class EventManagerCom {
 	/**
 	 * Constructor
 	 * 
-	 * @param dcb - {@link DarwinClientBaseCom} served by this {@link EventManagerCom}
+	 * @param dcb - {@link MTClientBaseCom} served by this {@link EventManagerCom}
 	 */
-	EventManagerCom(DarwinClientBaseCom dcb) {
+	EventManagerCom(MTClientBaseCom dcb) {
 		log = dcb.log();
 	}
 

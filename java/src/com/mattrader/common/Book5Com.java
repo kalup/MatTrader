@@ -28,7 +28,7 @@ public class Book5Com {
 	 * @param timestamp	Timestamp of the transaction
 	 */
 	Book5Com(BidAskCom l0, BidAskCom l1, BidAskCom l2, BidAskCom l3, BidAskCom l4,
-			String timestamp, DarwinClientBaseCom dcb) {
+			String timestamp, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.fff(this, "constructor; timestamp: " + timestamp);

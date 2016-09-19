@@ -10,7 +10,7 @@ import com.mattrader.common.TickerCom;
 
 public class Ticker {
 
-	final TickerCom ticker; // not private, see DarwinClientBase.resizeBuffer()
+	final TickerCom ticker; // not private, see MTClientBase.resizeBuffer()
 	
 	private boolean isSessionSet = false;
 	private SessionDB session = null;

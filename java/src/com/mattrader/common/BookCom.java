@@ -25,7 +25,7 @@ public class BookCom {
 	 * @param bidAsk
 	 * @param dcb
 	 */
-	BookCom(PriceDataCom priceData, Book5Com book5, BidAskCom bidAsk, DarwinClientBaseCom dcb) {
+	BookCom(PriceDataCom priceData, Book5Com book5, BidAskCom bidAsk, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.fff(this, "constructor");

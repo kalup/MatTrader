@@ -15,14 +15,14 @@ class HistoricalCallsManagerCom {
 
 	private LinkedBlockingQueue<HistoricalDataSeriesCom> tickerFIFO;
 	
-	private final DarwinClientBaseCom dcb;
+	private final MTClientBaseCom dcb;
 	
 	/**
 	 * Constructor
 	 * 
-	 * @param dcb - {@link DarwinClientBaseCom} served by this class
+	 * @param dcb - {@link MTClientBaseCom} served by this class
 	 */
-	HistoricalCallsManagerCom(DarwinClientBaseCom dcb) {
+	HistoricalCallsManagerCom(MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.c(this, "constructor");

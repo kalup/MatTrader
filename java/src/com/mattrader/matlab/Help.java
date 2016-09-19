@@ -114,26 +114,26 @@ public abstract class Help {
 					link(name+".getOffPrices")+"\n" +
 					link(name+".getOpenPrices")+"\n\n" +
 					"Vedasi: " + link("HistoricalDataSeries") + ", " + link("TBTSeries");
-		// DarwinClientBase
-		else if(is(name,"DarwinClientBase.getTicker"))
+		// MTClientBase
+		else if(is(name,"MTClientBase.getTicker"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase.openServices"))
+		else if(is(name,"MTClientBase.openServices"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase.close"))
+		else if(is(name,"MTClientBase.close"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase.defaultSessionBuffer"))
+		else if(is(name,"MTClientBase.defaultSessionBuffer"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase.getOpenServices"))
+		else if(is(name,"MTClientBase.getOpenServices"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase.isReady"))
+		else if(is(name,"MTClientBase.isReady"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase.onErrorEvent"))
+		else if(is(name,"MTClientBase.onErrorEvent"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase.ignoreHeartbeat"))
+		else if(is(name,"MTClientBase.ignoreHeartbeat"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase.printOutput"))
+		else if(is(name,"MTClientBase.printOutput"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientBase"))
+		else if(is(name,"MTClientBase"))
 			return "Client che permette di interfacciarsi con la Darwin offerta da Directa. Vi è la possibilità " +
 					"di avere contemporaneamente più client attivi contemporaneamente, purché ciascuno abbia " +
 					"nomi differenti. Tramite questa classe è possibile richiedere degli oggetti che permettano " +
@@ -149,15 +149,15 @@ public abstract class Help {
 					link(name+".onErrorEvent")+"\n"+
 					link(name+".ignoreHeartbeat")+"\n"+
 					link(name+".printOutput")+"\n\n" +
-					"Vedasi: " + link("DarwinClientManager") + ", " + link("Ticker");
-		// DarwinClientManager
-		else if(is(name,"DarwinClientManager.getClient"))
+					"Vedasi: " + link("MTClientManager") + ", " + link("Ticker");
+		// MTClientManager
+		else if(is(name,"MTClientManager.getClient"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientManager.getClients"))
+		else if(is(name,"MTClientManager.getClients"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientManager.stopAll"))
+		else if(is(name,"MTClientManager.stopAll"))
 			return ""; //TODO
-		else if(is(name,"DarwinClientManager"))
+		else if(is(name,"MTClientManager"))
 			return "Questa classe permette di gestire i client attivi, in particolare permette di ottenere " +
 					"un client dato un nome o un vettore contennte tutti i client attivi e permette di " +
 					"stoppare tutti i client. All'atto pratico si tratta di un singleton, di solito non viene " +
@@ -166,7 +166,7 @@ public abstract class Help {
 					link(name+".getClient")+"\n" +
 					link(name+".getClients")+"\n" +
 					link(name+".stopAll")+"\n\n" +
-					"Vedasi: " + link("DarwinClientBase");
+					"Vedasi: " + link("MTClientBase");
 		// HistoricalDataSeries
 		else if(is(name,"HistoricalDataSeries.getDateTimeSeries"))
 			return ""; //TODO

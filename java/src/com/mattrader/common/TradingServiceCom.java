@@ -14,7 +14,7 @@ public class TradingServiceCom extends ServiceCom {
 	 * 
 	 * @param callerDcb - the client that creating this service
 	 */
-	TradingServiceCom(DarwinClientBaseCom callerDcb) {	// We ensure this class can't be instantiated
+	TradingServiceCom(MTClientBaseCom callerDcb) {	// We ensure this class can't be instantiated
 													// by external apps
 		super(callerDcb);
 	}
@@ -24,7 +24,7 @@ public class TradingServiceCom extends ServiceCom {
 	 */
 	@Override
 	public int getPort() {
-		return DarwinClientBaseCom.TRADING_PORT;
+		return MTClientBaseCom.TRADING_PORT;
 	}
 	
 	// Trading specific functions

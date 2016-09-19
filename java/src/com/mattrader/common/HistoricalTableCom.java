@@ -66,9 +66,9 @@ public class HistoricalTableCom implements EventManagerCom.DirectaConnectorListe
 	 * Constructor
 	 * 
 	 * @param candle - the {@link CandleSeriesCom} containing information
-	 * @param dcb - the {@link DarwinClientBaseCom} client whose table refers to
+	 * @param dcb - the {@link MTClientBaseCom} client whose table refers to
 	 */
-	HistoricalTableCom(CandleSeriesCom candle, DarwinClientBaseCom dcb) {
+	HistoricalTableCom(CandleSeriesCom candle, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.ff(this,"constructor");
@@ -96,9 +96,9 @@ public class HistoricalTableCom implements EventManagerCom.DirectaConnectorListe
 	 * 
 	 * @param candle the {@link CandleSeriesCom} containing information
 	 * @param maxRow the maximum number of entries this table must keep
-	 * @param dcb the {@link DarwinClientBaseCom} client whose table refers to
+	 * @param dcb the {@link MTClientBaseCom} client whose table refers to
 	 */
-	HistoricalTableCom(CandleSeriesCom candle, int maxRows, DarwinClientBaseCom dcb) {
+	HistoricalTableCom(CandleSeriesCom candle, int maxRows, MTClientBaseCom dcb) {
 
 		log = dcb.log();
 		log.ff(this,"constructor");
