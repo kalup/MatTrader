@@ -390,8 +390,7 @@ public class MTEvent {
 		/**
 		 * Constructor
 		 * 
-		 * @param caller - the {@link HistoricalDataSeriesCom} object who fired the event
-		 * @param ticker - the {@link TickerCom} ticker whose this series refer to
+		 * @param e - the event that will be fired
 		 */
 		SeriesReadyEvent(EventCom.SeriesReadyEvent e) throws Exception {
 			this.e = e;
@@ -455,8 +454,7 @@ public class MTEvent {
 		/**
 		 * Constructor
 		 * 
-		 * @param caller - the {@link HistoricalTableCom} object who fired the event
-		 * @param ticker - the {@link TickerCom} ticker whose this series refer to
+		 * @param e - the event that will be fired
 		 */
 		TableReadyEvent(EventCom.TableReadyEvent e) throws Exception {
 			this.e = e;
@@ -508,10 +506,7 @@ public class MTEvent {
 		/**
 		 * Constructor
 		 * 
-		 * @param caller the object who fired the event
-		 * @param errorDesc a string containing the description of the error
-		 * @param errorCode an int representing the code of the error. See Darwin
-		 * wiki for error codes. If it is an Exception, the errorCode will be -1.
+		 * @param e - the event that will be fired
 		 */
 		ErrorEvent(EventCom.ErrorEvent e) throws Exception {
 			this.e = e;

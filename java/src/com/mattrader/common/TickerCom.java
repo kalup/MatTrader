@@ -984,7 +984,7 @@ public class TickerCom {
 
 	/**
 	 * Send an order for buying a defined amount of stocks at specified price
-	 * when the price reach a defined signal. price > signal
+	 * when the price reach a defined signal. price &gt; signal
 	 * 
 	 * @param price - the price
 	 * @param qty - the amount
@@ -1006,7 +1006,7 @@ public class TickerCom {
 
 	/**
 	 * Send an order for selling a defined amount of stocks at specified price
-	 * when the price reach a defined signal. price < signal
+	 * when the price reach a defined signal. price &lt; signal
 	 * 
 	 * @param price - the price
 	 * @param qty - the amount

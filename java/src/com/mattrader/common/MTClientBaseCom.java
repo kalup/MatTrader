@@ -59,6 +59,8 @@ public class MTClientBaseCom {
 	
 	/**
 	 * Construct a MTClientBaseCom and initialize connections to Darwin
+	 * 
+	 * @param name	a descriptive name of the client
 	 */
 	MTClientBaseCom(String name) {
 		

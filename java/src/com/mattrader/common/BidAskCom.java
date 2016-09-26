@@ -25,6 +25,7 @@ public class BidAskCom {
 	 * @param nPropAsk	Number of proposal of the ask
 	 * @param prAsk		Price of the ask
 	 * @param timestamp	Timestamp of the transaction
+	 * @param dcb		Client
 	 */
 	BidAskCom(long qtyBid, long nPropBid, double prBid, long qtyAsk, long nPropAsk, double prAsk,
 			String timestamp, MTClientBaseCom dcb) {

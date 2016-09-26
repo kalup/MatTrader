@@ -95,7 +95,7 @@ public class HistoricalTableCom implements EventManagerCom.DirectaConnectorListe
 	 * Constructor
 	 * 
 	 * @param candle the {@link CandleSeriesCom} containing information
-	 * @param maxRow the maximum number of entries this table must keep
+	 * @param maxRows the maximum number of entries this table must keep
 	 * @param dcb the {@link MTClientBaseCom} client whose table refers to
 	 */
 	HistoricalTableCom(CandleSeriesCom candle, int maxRows, MTClientBaseCom dcb) {

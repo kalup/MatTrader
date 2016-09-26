@@ -1279,7 +1279,7 @@ public class SessionDBCom {
 	 * @param timeList
 	 * @param timeB
 	 * @param timeE
-	 * @return ArrayList<Integer[]> containing couples of indexes
+	 * @return an {@code ArrayList<Integer[]>} containing couples of indexes
 	 */
 	private ArrayList<Integer[]> getSectors(TreeMap<String,Integer> map, ArrayList<String> timeList,
 			String timeB, String timeE) {
