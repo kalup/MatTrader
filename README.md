@@ -48,9 +48,10 @@ Save and close this file. Now restart Matlab.
 
 ```matlab
 %% This file provide some simple commands to test the interface and get in touch
-%% with some of the functionality of the framework
+%% with some of the functionality of the framework.
+%% You need to build a class implementing IProvider that let you connect to your provider (for development we used an implementation that made references to Directa APIs, which cannot be shared for APIs policies).
 
-manager = MTManager;
+manager = MTManager(provider);
 client = manager.getClient('test');
 fca = client.getTicker('fca');
 fca.dailyMax % daily Max
