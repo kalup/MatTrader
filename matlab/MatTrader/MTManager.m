@@ -9,9 +9,11 @@ classdef MTManager < handle
     end
     
     methods
-        function obj = MTManager()
+        function obj = MTManager(provider)
             import com.mattrader.matlab.*
+            import com.mattrader.common.IProvider
             obj.manager = MTClientManager.Manager;
+            obj.manager.setProvider(provider);
         end
         
         function client = getClient(obj, name)

@@ -24,7 +24,7 @@ public class TradingServiceCom extends ServiceCom {
 	 */
 	@Override
 	public int getPort() {
-		return MTClientBaseCom.TRADING_PORT;
+		return dcb.TRADING_PORT;
 	}
 	
 	// Trading specific functions

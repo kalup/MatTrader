@@ -43,6 +43,8 @@ public enum MTClientManagerCom {
 	private ConcurrentHashMap<String, MTClientBaseCom> dcbMap;
 		// Maybe better: Collections.synchronizedMap(new HashMap(...));
 
+	private IProvider provider;
+	
 	/**
 	 * Constructor, it get called automatically the first time Manager is required.
 	 * Thread safe
@@ -55,19 +57,36 @@ public enum MTClientManagerCom {
 			}
 		});
 		dcbMap = new ConcurrentHashMap<String, MTClientBaseCom>();
+		provider = null;
+	}
+	
+	/**
+	 * Method used to set a provider. Once a provider has been set it can't be changed anymore.
+	 * 
+	 * @param provider
+	 */
+	public synchronized void setProvider(IProvider provider) {
+		if(this.provider != null)
+			return;
+		this.provider = provider;
 	}
 	
 	/**
 	 * Method to obtain a {@link MTClientBaseCom} given the name. If in memory 
 	 * it exists a client with the same name, it will be returned, else a new one
-	 * will be
+	 * will be returned
 	 * @param name - the name of the client
 	 * @return a {@link MTClientBaseCom} client
 	 */
-	public synchronized MTClientBaseCom getClient(String name) {
+	public synchronized MTClientBaseCom getClient(String name) throws NullPointerException {
+		if(provider == null) {
+			this.uncaughtExceptionLogger.e(this, "An instance of IProvider must be set before "
+					+ "requesting a client. Use MTClientManagerCom#setProvider(IProvider) method.");
+			throw new NullPointerException();
+		}
 		if(!dcbMap.isEmpty() && dcbMap.containsKey(name))
 			return dcbMap.get(name);
-		MTClientBaseCom dcb = new MTClientBaseCom(name);
+		MTClientBaseCom dcb = new MTClientBaseCom(name, provider);
 		dcbMap.put(name, dcb);
 		return dcb;
 	}

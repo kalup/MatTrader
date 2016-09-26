@@ -23,7 +23,7 @@ public class HistoryServiceCom extends ServiceCom {
 	 */
 	@Override
 	public int getPort() {
-		return MTClientBaseCom.HISTORY_PORT;
+		return dcb.HISTORY_PORT;
 	}
 	
 	// History specific functions

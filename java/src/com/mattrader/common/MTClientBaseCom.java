@@ -27,11 +27,11 @@ public class MTClientBaseCom {
 
 	final String clientName;
 
-	static final String hostname = "localhost";
+	final String hostname;
 
-	static final int DATAFEED_PORT = 10001;
-	static final int TRADING_PORT = 10002;
-	static final int HISTORY_PORT = 10003;
+	final int DATAFEED_PORT;
+	final int TRADING_PORT;
+	final int HISTORY_PORT;
 	
 	boolean ignoreHeartbeat;
 	boolean printOutput;
@@ -62,7 +62,7 @@ public class MTClientBaseCom {
 	 * 
 	 * @param name	a descriptive name of the client
 	 */
-	MTClientBaseCom(String name) {
+	MTClientBaseCom(String name, IProvider provider) {
 		
 		clientName = name;
 		ignoreHeartbeat = true;
@@ -74,6 +74,13 @@ public class MTClientBaseCom {
 		log.setErrorEventManager(errorEventManager);
 		
 		log.c(this, "constructor; name: " + name);
+		
+		// set up provider
+		hostname = provider.getHostname();
+
+		DATAFEED_PORT = provider.getDataFeedServicePort();
+		TRADING_PORT = provider.getTradingServicePort();
+		HISTORY_PORT = provider.getHistoryServicePort();
 
 		tickerList = new HashMap<String,TickerCom>();
 

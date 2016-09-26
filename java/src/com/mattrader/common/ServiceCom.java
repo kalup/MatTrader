@@ -51,7 +51,7 @@ public abstract class ServiceCom {
 		log.c(this, "opening");
 		if(!this.isOpen()) {
 			try {
-				socket = new Socket(MTClientBaseCom.hostname, this.getPort());
+				socket = new Socket(dcb.hostname, this.getPort());
 				input = new BufferedReader(
 						new InputStreamReader(socket.getInputStream()));
 				output = new PrintWriter(socket.getOutputStream(),true);

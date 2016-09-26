@@ -2,12 +2,17 @@ package com.mattrader.matlab;
 
 import java.util.Collection;
 
+import com.mattrader.common.IProvider;
 import com.mattrader.common.MTClientBaseCom;
 import com.mattrader.common.MTClientManagerCom;
 
 public enum MTClientManager {
 
 	Manager;
+	
+	public synchronized void setProvider(IProvider provider) {
+		MTClientManagerCom.Manager.setProvider(provider);
+	}
 
 	public synchronized MTClientBase getClient(String name) {
 		try {

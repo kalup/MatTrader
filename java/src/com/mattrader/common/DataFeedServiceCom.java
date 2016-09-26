@@ -23,7 +23,7 @@ public class DataFeedServiceCom extends ServiceCom {
 	 */
 	@Override
 	public int getPort() {
-		return MTClientBaseCom.DATAFEED_PORT;
+		return dcb.DATAFEED_PORT;
 	}
 	
 	// DataFeed specific functions
